@@ -1,0 +1,13 @@
+version: '3'
+
+volumes:
+  database_data:
+
+services:
+  nginx:
+    image: romeoz/docker-apache-php
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+
